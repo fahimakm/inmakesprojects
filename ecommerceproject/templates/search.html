@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block meta-description %}
+    Welcome to EYRA BOUTIQUE
+{% endblock %}
+
+{% block title %}
+    search
+{% endblock %}
+
+{% block content %}
+<div class="text-centre search_text">you have searched for :<b>"{{query}}"</b></div>
+
+   <div class="row mx_auto">
+         {% for product in products %}
+         <div class="col-sm-6">
+             <div class="card-text-center" style="...">
+                 <a href="{{product.get_url}}"><img class="card-img-top" src="{{product.img.url}}" alt="{{product.name}}"></a>
+                 <div class="card-body">
+                     <div class="sub_title">
+                      <h4>{{product.name}}</h4>
+                      <p>{{product.price}}</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+       {% empty %}
+       <div class="row mx-auto">
+           <p class="text-center search_text">No results found </p>
+       </div>
+         {% endfor %}
+     </div>
+{% endblock %}
