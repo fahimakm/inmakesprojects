@@ -19,10 +19,21 @@ background-color:#f8f9fa;
 height:60px;
 }
 
-.my-footer p{
+/**.my-footer p{
 padding-top:20px;
-font-size:14px;}
+font-size:14px;}**/
 
+.my-footer p{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; /* Adjust the background color as needed */
+    color: #fff; /* Adjust the text color as needed */
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Make the footer full-width */
+}
 /*** category page ***/
 .my_row_class{
 padding-top:15px;
@@ -34,8 +45,8 @@ font-size:12px;
 }
 
 .my_image{
-width:450px;
-height:450px;
+width:1000px;
+height:400px;
  display: block;
   margin-left: auto;
   margin-right: auto;
@@ -69,7 +80,12 @@ font-size:20px;
 text-transform:uppercase;
 
 }
+.product-desc-title{
+letter-spacing:.2em;
+font-size: 15px;
+text-transform:uppercase;
 
+}
 .search_text{
 padding-top: 20px;
 }
